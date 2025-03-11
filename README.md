@@ -12,7 +12,7 @@ FreeUSP Toolkit https://stuartschmitt.com/FreeUSP/
 ### Install
 ```bash
 git clone https://github.com/sergeevsn/tfdnoisepy.git
-cd find_geom_errors
+cd tfdnoisepy
 python3 -m venv .venv
 pip install -r requirements.txt
 ```
