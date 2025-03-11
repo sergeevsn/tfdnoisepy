@@ -3,3 +3,5 @@
 .other/
 .test/
 __pycache__/
+test_data/02_test_shots_denoise.sgy
+test_data/03_difference.sgy
