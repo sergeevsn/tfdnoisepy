@@ -2,6 +2,9 @@
 
 STFT Median Thresholding Filter, based on FreeUSP TFDNoise uitility.
 The filtering function itself is in tfd.py.
+Utility tfdnoise.py takes a SEG-Y file, filters out all gathers in it 
+and stores result in SEG-Y file, making a difference SEG-Y file as well.
+Parameters are stored in tfdparams.py
 
 Uses SegyIO for file reading https://github.com/equinor/segyio
 
