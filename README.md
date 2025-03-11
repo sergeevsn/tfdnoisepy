@@ -1,11 +1,6 @@
 ## tfdnoise.py
 
-STFT Median Thresholding Filter, based on FreeUSP TFDNoise uitility.
-The filtering function itself is in ```tfd.py```.
-Utility ```tfdnoise.py``` takes a SEG-Y file, filters out all gathers in it 
-and stores result in SEG-Y file, making a difference SEG-Y file as well.
-Parameters are stored in tfdparams.py
-Utility ```makepics.py``` draws a comparison plot of these 3 SEG-Y files for specified trace numbers.
+STFT Median Thresholding Filter, based on the FreeUSP TFDNoise utility. The filtering function itself is located in ```tfd.py```. The utility tfdnoise.py takes a SEG-Y file, filters all gathers within it, and stores the result in a new SEG-Y file, while also creating a difference SEG-Y file. Parameters for the filtering process are stored in ```tfdparams.py```. The utility ```makepics.py``` generates a comparison plot of these three SEG-Y files for specified trace numbers.
 
 Uses ```SegyIO``` for file reading https://github.com/equinor/segyio
 
