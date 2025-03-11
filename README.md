@@ -13,6 +13,7 @@ FreeUSP Toolkit https://stuartschmitt.com/FreeUSP/
 git clone https://github.com/sergeevsn/tfdnoisepy.git
 cd tfdnoisepy
 python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
