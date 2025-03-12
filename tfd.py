@@ -24,12 +24,12 @@ def tfd_noise_rejection(data, n_samples_stft, trace_aperture, threshold_multipli
     n_samples_stft = next_power_of_two(n_samples_stft)
 
     if n_samples_stft >= data.shape[1]:
-        print('Number of n_samples_stft must be smaller than trace length!')
-        return None
+        print('Number of n_samples_stft must be smaller than trace length! Returning unfiltered data.')
+        return data
     
     if trace_aperture >= data.shape[0]:
-        print('Parameter trace_aperture must be smaller than number of traces!')
-        return None
+        print('Parameter trace_aperture must be smaller than number of traces!  Returning unfiltered data.')
+        return data
 
     # Compute STFT for the remaining traces
     for i in range(1, n_traces):
