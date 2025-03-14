@@ -47,10 +47,7 @@ def tfd_noise_rejection(data, n_samples_stft, trace_aperture, threshold_multipli
     stft_array = np.stack(stfts, axis=0)  # Shape (n_traces, n_freq, n_time)
     amplitudes = np.abs(stft_array)
     phases = np.angle(stft_array)
-
-    # Save the DC component
-    dc_component = amplitudes[:, 0:1, :].copy()
-    
+       
     # Global median for threshold
     median_per_freq = np.median(amplitudes, axis=0)
     global_median = np.median(median_per_freq)
@@ -81,9 +78,6 @@ def tfd_noise_rejection(data, n_samples_stft, trace_aperture, threshold_multipli
     median_filtered_amp = median_filter(amplitudes, 
                                       size=(2*trace_aperture+1, 1, 1),
                                       mode='nearest')
-
-    # Restore the DC component
-    median_filtered_amp[:, 0:1, :] = dc_component
     
     # Apply replacement based on the mask
     amplitudes[mask] = median_filtered_amp[mask]

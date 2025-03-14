@@ -15,4 +15,4 @@ threshold_multiplier = 1.0
 # Start time points
 use_start_times = True
 offsets_sparse = [0, 3350, 5000]                   
-times_sparse  = [0.1, 0.9, 1.2]
+times_sparse  = [0.0, 0.9, 1.2]
